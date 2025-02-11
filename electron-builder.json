@@ -1,0 +1,18 @@
+{
+    "appId": "com.auri.io-sim",
+    "files": ["dist-electron", "dist-react"],
+    "icon": "./desktopIcon.png",
+    "extraResources": [ 
+        "dist-electron/preload.cjs"
+    ],
+    "mac": {
+        "target": "dmg"
+    },
+    "linux": {
+        "target": "AppImage",
+        "category": "Utility"
+    },
+    "win": {
+        "target": [ "msi", "portable" ]
+    }
+}

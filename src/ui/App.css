@@ -1,0 +1,58 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; 
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  overflow: hidden;
+  height: 100%;
+}
+
+.main {
+  width: 600px; 
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  flex: 1; 
+  padding: 10px;
+  overflow: hidden; 
+}
+
+.log-window, .debug-window {
+  display: flex;
+  flex-direction: column;
+  flex: 1; 
+  min-height: 0; 
+}
+
+.log-window h2, .debug-window h2 {
+  margin: 0 0 5px 0;
+  font-size: 16px;
+}
+
+.log-textarea, .debug-textarea {
+  flex: 1; 
+  width: 100%;
+  resize: none;
+  background-color: #1e1e1e;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 14px;
+  overflow-y: auto;
+}

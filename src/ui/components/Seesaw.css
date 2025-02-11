@@ -1,0 +1,16 @@
+.seesaw-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    padding: 20px;
+  }
+  
+  .seesaw-simulation {
+    width: 100%; 
+    margin-bottom: 20px; 
+  }
+  
+  .analysis-wrapper {
+    width: 100%; 
+  }
+  

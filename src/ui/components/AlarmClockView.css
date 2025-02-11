@@ -1,0 +1,22 @@
+.seven-segment-display {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .colon {
+    width: 8px;
+    height: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .colon::before,
+  .colon::after {
+    content: \"\";
+    width: 8px;
+    height: 8px;
+    background-color: #FF0000;
+    border-radius: 50%;
+  }
+  
