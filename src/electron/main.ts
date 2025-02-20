@@ -147,6 +147,7 @@ app.on("ready", async () => {
   ipcMain.handle("get-debug-messages", () => logManager.getDebugMessages());
 
   ipcMain.on("button-click", (_event, hexValue: string) => {
+    console.log(`Button click: ${hexValue}`);
     writeSerialMessage(`d02${hexValue}\n`);
   });
 

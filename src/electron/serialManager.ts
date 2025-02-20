@@ -109,7 +109,7 @@ function handleSerialPacket(packet: string) {
     const boing = dataHex[12] === "t";
     const seesawData = { reference, ball, angle, boing };
     mainWindow.webContents.send("seesaw-event", seesawData);
-  } else if (packet.startsWith("dT")) {
+  } else if (packet.startsWith("?T")) {
     const now = new Date();
     const year = now.getFullYear();
     const month = (now.getMonth() + 1).toString().padStart(2, "0");
@@ -118,7 +118,7 @@ function handleSerialPacket(packet: string) {
     const minute = now.getMinutes().toString().padStart(2, "0");
     const second = now.getSeconds().toString().padStart(2, "0");
     const nowString = `${year}${month}${day}${hour}${minute}${second}`;
-    const answer = `dT${nowString}`;
+    const answer = `dT${nowString}\n`;
     writeSerialMessage(answer);
   } else if (packet.startsWith("dV")) {
     writeSerialMessage(vppVersion);
